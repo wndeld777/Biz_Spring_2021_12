@@ -8,6 +8,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.mysql.cj.log.Log;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 @RequestMapping(value = "/file")
 public class FileController {
@@ -32,7 +35,7 @@ public class FileController {
 	public String fileUp(String to_title,@RequestParam("to_image") MultipartFile rev_file) {
 		
 		log.debug("TODO {}",to_title);
-		Log.debug("파일 {}",rev_file.getOriginalFilename());
+		log.debug("파일 {}",rev_file.getOriginalFilename());
 		
 		return "redirect:/file";
 		
