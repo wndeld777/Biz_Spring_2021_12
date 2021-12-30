@@ -23,25 +23,27 @@
 	고용량의 파일을 전송하고 서버를 멈추게 할 수 있다
 	(file Bump 공격)
 	-->
-	
-	<bean id="multipartResolver" 
-	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSizePerFile" value="2000000"></property>
-		<property name="maxUploadSize" value="20000000"></property>
-		
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSizePerFile" value="2000000"/>
+		<property name="maxUploadSize" value="20000000"/>
 	</bean>
 	
-	<mvc:resources mapping="/files/**" 
-		location="
-		file:///C:/bizworks/upload,
-		file://Users/wndel/Documents/workspace/upload/,
-		/static/files/,
-		/static/images/" />
-
+	<mvc:resources mapping="/files/**"
+			location="
+			file:///C:/bizworks/upload/,
+			file:///Users/callor/Documents/workspace/upload/,
+			/static/files/,
+			/static/images/" 
+			/>
+			
 	<bean id="winPath" class="java.lang.String">
-		<constructor-arg value="c:/bizworks/upload/"/>
+		<constructor-arg 
+		value="c:/bizworks/upload/"/>
 	</bean>
 	<bean id="macPath" class="java.lang.String">
-		<constructor-arg value="/User/wndel/Documents/workspace/upload/"/>
+		<constructor-arg 
+			value="/Users/callor/Documents/workspace/upload/"/>
 	</bean>
+			
 </beans>

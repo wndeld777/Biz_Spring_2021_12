@@ -2,13 +2,22 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="rootPath" value="${pageContext.request.contextPath }"/> 
-<form class="form" id="todoInput" method="POST" enctype="multipart/form-data">
+<form 
+	class="form" id="todoInput" 
+	method="post"
+	enctype="multipart/form-data"
+	>
 	<div class="image_wrapper">
-		<img id="to_image_thumnail" src="${rootPath }/static/images/noImage.png" width="30px">
+		<img id="to_image_thumnail"
+			src="${rootPath}/static/images/noImage.png"
+			width="30px"
+		>
 	</div>
 	<input name="to_text" placeholder="TODO">
 	<div class="insert-button">추가</div>
-	<input accept="image/*" type="file" id="imgTag" name="to_image"/>
+	<input accept="image/*" 
+			type="file" 
+			id="imgTag" name="to_image" />
 </form>
 <script>
 document.addEventListener("DOMContentLoaded",function(){
@@ -74,5 +83,5 @@ document.addEventListener("DOMContentLoaded",function(){
 		})
 	}
 })
-
 </script>
+

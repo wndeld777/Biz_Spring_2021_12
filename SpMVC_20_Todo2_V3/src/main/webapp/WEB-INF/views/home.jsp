@@ -21,7 +21,6 @@
 		<%@ include file="/WEB-INF/views/todoList.jsp" %>
 	</section>
 </main>
-<p><img width="50px" id="imgView"
-			src="${rootPath}/files/${IMAGES.SAVENAME}">
+
 </body>
 </html>

@@ -20,15 +20,16 @@ import lombok.extern.slf4j.Slf4j;
 @Service(QualifierConfig.SERVICE.FILE_SERVICE_V1)
 public class FileServiceImplV1 extends FileServiceABS{
 
-	/**
+	/***
 	 * fileUp()
-	 * 1개의 파일을 서버의 특정폴더(fileUpPath) 에 업로드하기
+	 * 1개의 파일을 서버의 특정폴더(fileUpPath)에 업로드하기
 	 * 
 	 * 1. fileUpPath 가 정상적으로 있는지 검사
 	 * 2. 폴더가 없으면 폴더 생성하기
 	 * 3. 원본파일이름을 겹쳐서 업로드 되지 않도록 방지정책
-	 * 		UUID + 파일이름 형식으로 파일명을 변경하여 저장
-	 * 4. 저장이 완료되면 저장된 파일명을 return
+	 * 	UUID + 파일이름 형식으로 파일명을 변경하여 저장
+	 * 4. 저장이 완료되면 저장된 파일명을 return 
+	 * 
 	 */
 	@Override
 	public Map<String,String> fileUp(MultipartFile file) {
